@@ -4,42 +4,42 @@ const produkter = [
         namn: "Björn",
         skapare: "Joakim Lundell",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg",
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg",
     },
     {
         namn: "Björn",
         skapare: "Joakim Babybel",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
     },
     {
         namn: "Björn",
         skapare: "Joakim Luleå Bortaställ",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
     },
     {
         namn: "Björn",
         skapare: "Joakim Hemmakväll",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
     },
     {
         namn: "Björn",
         skapare: "Joakim Med Mjäll",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
     },
     {
         namn: "Björn",
         skapare: "Joakim Bechamel",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
+        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg"
     },
 
 ];
 
-const container = document.getElementById("card-container");
+const container = document.getElementById("card-container-pop");
 
 produkter.forEach(produkt => {
     const card = document.createElement("div");
