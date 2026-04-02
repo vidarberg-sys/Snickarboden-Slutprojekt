@@ -1,14 +1,17 @@
 .current{
-    color:#333;
+    color:#000000;
+    font-size: 165%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .logo1{
-    margin-left:67%;
+    margin-left:60%;
+    text-decoration: none;
 }
 .logo{
     margin-left:60px;
 }
 .navbar {
-    background-color: rgb(223, 223, 185);
+    background-color: rgb(229, 176, 101);
     padding-left: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -51,7 +54,7 @@
 .Pop {
     margin-left: 9%;
     margin-top: 120px;
-    font-size: 170%;
+    font-size: 250%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
 }
@@ -59,23 +62,23 @@
 .Pop3 {
     margin-left: 9%;
     margin-top: 40px;
-    font-size: 170%;
+    font-size: 250%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
 }
 
 .Pop2 {
-    margin-top: 132px;
+    margin-top: 145px;
     margin-left: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration-color: #333;
     color: #333;
 }
 a{
-    color:#333
+    color:#333;
 }
 .Pop4 {
-    margin-top: 53px;
+    margin-top: 65px;
     margin-left: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -85,7 +88,7 @@ a{
 #card-container-nya {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap:40px;
 
     padding-left: 100px;
     padding-right: 20px;
@@ -103,7 +106,6 @@ a{
     height:100%;
     display: flex;
     flex-direction: column;
-    margin-top:5px;
 }
 
 .image-box {
@@ -130,43 +132,81 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
 .text p:last-child {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
 body {
-    background-color: rgb(242, 226, 186);
+    background-color: rgb(247, 186, 134);
 }
-.cart-btn {
+
+/* Gemensam knappstil för korg och ta-bort knappar */
+.cart-btn,
+.remove-btn {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    
-
     width: 40px;
     height: 30px;
-
-    background-color: #28a745;
     color: white;
-
+    border: none;
     border-radius: 15%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    text-decoration: none;
-    font-size: 18px;
-    transition: transform 0.2s ease;
 }
 
-.cart-btn:hover {
+.cart-btn:hover,
+.remove-btn:hover {
     transform: scale(1.1);
+}
+
+.cart-btn {
+    background-color: #28a745;
+}
+
+.prdba{
+    background-color:rgb(236, 152, 88);
+    height: 100%;
+    width: 100%;
+    padding-top: 1px;
+    border-radius: 15px;
+    padding-bottom:40px ;
+}
+
+.cart-title {
+    margin-left: 100px;
+    margin-top: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+#cart-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-left: 100px;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.empty-message {
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.remove-btn {
+    background-color: #dc3545;
 }
