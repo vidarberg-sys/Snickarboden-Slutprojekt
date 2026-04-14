@@ -2,14 +2,19 @@
     color:#000000;
     font-size: 165%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
 }
 .logo1{
-    margin-left:60%;
     text-decoration: none;
+    user-select: none;
+    font-size: 40px;
+    padding: 8px 12px;
+    background-color: rgb(236, 152, 88);
+    border-radius: 8px;
+    display: inline-block;
+    margin-right:100px;
 }
-.logo{
-    margin-left:60px;
-}
+
 .navbar {
     background-color: rgb(229, 176, 101);
     padding-left: 100px;
@@ -20,6 +25,7 @@
     top: 0;
     left: 0;
     z-index: 10;
+    user-select: none;
 }
 
 .nav { 
@@ -29,6 +35,7 @@
     padding: 0;
     font-size: 150%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
 }
 
 
@@ -39,6 +46,48 @@
     width: 80px;
     left: 0;
     top: 0;
+    user-select: none;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.barnav.expanded {
+    width: 200px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    gap: 15px;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item-top {
+    margin-top: 100px;
+}
+
+.nav-item .emoji {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.nav-item .label {
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.barnav.expanded .nav-item .label {
+    opacity: 1;
 }
 
 
@@ -48,7 +97,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    user-select: none;
 }
 
 .Pop {
@@ -57,6 +106,7 @@
     font-size: 250%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
+    user-select: none;
 }
 
 .Pop3 {
@@ -65,6 +115,7 @@
     font-size: 250%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
+    user-select: none;
 }
 
 .Pop2 {
@@ -73,26 +124,30 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration-color: #333;
     color: #333;
+    user-select: none;
 }
 a{
     color:#333;
+    user-select: none;
 }
 .Pop4 {
     margin-top: 65px;
     margin-left: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
 }
 
 
+.card-grid,
 #card-container-pop,
 #card-container-nya {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap:40px;
-
     padding-left: 100px;
     padding-right: 20px;
     margin-top: 20px;
+    user-select: none;
 }
 
 .card {
@@ -106,6 +161,7 @@ a{
     height:100%;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .image-box {
@@ -113,11 +169,13 @@ a{
     height: 120px;
     border: 2px solid #333;
     margin-bottom: 10px;
+    user-select: none;
 }
 
 .bild {
     width: 100%;
     height: 100%;
+    user-select: none;
 }
 
 .text {
@@ -125,6 +183,7 @@ a{
     min-height: 90px;
     height: 90px;
     overflow: hidden;
+    user-select: none;
 }
 .text p strong {
     display: block;
@@ -134,19 +193,21 @@ a{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    user-select: none;
 }
 
 .text p:last-child {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    user-select: none;
 }
 
 body {
     background-color: rgb(247, 186, 134);
 }
 
-/* Gemensam knappstil för korg och ta-bort knappar */
+
 .cart-btn,
 .remove-btn {
     position: absolute;
@@ -163,15 +224,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 .cart-btn:hover,
 .remove-btn:hover {
     transform: scale(1.1);
+    user-select: none;
 }
 
 .cart-btn {
     background-color: #28a745;
+    user-select: none;
 }
 
 .prdba{
@@ -181,6 +245,7 @@ body {
     padding-top: 1px;
     border-radius: 15px;
     padding-bottom:40px ;
+    user-select: none;
 }
 
 .cart-title {
@@ -188,6 +253,7 @@ body {
     margin-top: 120px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
+    user-select: none;
 }
 
 #cart-container {
@@ -198,6 +264,7 @@ body {
     padding-right: 20px;
     margin-top: 20px;
     padding-bottom: 40px;
+    user-select: none;
 }
 
 .empty-message {
@@ -205,8 +272,46 @@ body {
     margin-top: 20px;
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
 }
 
 .remove-btn {
     background-color: #dc3545;
+    user-select: none;
+}
+
+.check {
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width:fit-content;
+    user-select: none;
+}
+
+.check:hover {
+    background-color: #218838;
+    user-select: none;
+}
+
+
+.logobx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    user-select: none;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.barnavlg{
+    text-decoration: none;;
 }

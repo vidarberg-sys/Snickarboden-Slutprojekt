@@ -3,7 +3,7 @@ const produkterPop = [
         id: "prod-1",
         namn: "Björn",
         skapare: "Joakim Lundell",
-        beskrivning: "Tog mig 7 minuter att göra denna björn.",
+        beskrivning: "Det är en björn.Galet liksom.",
         bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg",
     },
     {
@@ -86,7 +86,6 @@ function renderCards(produkter, containerId) {
 
         container.appendChild(card);
 
-        // Lägg till klick-listener på korg-knappen
         const cartBtn = card.querySelector(".cart-btn");
         cartBtn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -95,7 +94,6 @@ function renderCards(produkter, containerId) {
     });
 }
 
-// Korg-funktion
 function addToCart(produkt) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.push(produkt);
@@ -105,3 +103,28 @@ function addToCart(produkt) {
 
 renderCards(produkterPop, "card-container-pop");
 renderCards(produkterNya, "card-container-nya");
+
+// Sidebar navigation expand/collapse
+const sideNav = document.getElementById("sideNav");
+const navItems = document.querySelectorAll(".nav-item");
+
+// Only add listeners if sideNav exists
+if (sideNav && navItems.length > 0) {
+    // Toggle expansion on hover
+    sideNav.addEventListener("mouseenter", () => {
+        sideNav.classList.add("expanded");
+    });
+
+    sideNav.addEventListener("mouseleave", () => {
+        sideNav.classList.remove("expanded");
+    });
+
+    // Optional: Add click handlers for nav items (you can add functionality here)
+    navItems.forEach(item => {
+        item.addEventListener("click", (e) => {
+            const label = item.querySelector(".label").textContent;
+            console.log("Clicked:", label);
+            // Add your navigation logic here
+        });
+    });
+}
