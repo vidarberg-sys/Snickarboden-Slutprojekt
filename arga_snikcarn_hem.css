@@ -11,21 +11,96 @@
     padding: 8px 12px;
     background-color: rgb(236, 152, 88);
     border-radius: 8px;
-    display: inline-block;
-    margin-right:100px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logobx {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile-container {
+    display: inline-flex;
+}
+
+.profile-icon {
+    font-size: 40px;
+    padding: 8px 12px;
+    min-width: 56px;
+    min-height: 56px;
+    background-color: rgb(236, 152, 88);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .navbar {
     background-color: rgb(229, 176, 101);
     padding-left: 100px;
+    padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     user-select: none;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+        to right,
+        transparent 0px,
+        transparent 90px,
+        #333 90px,
+        #333 92px,
+        transparent 92px,
+        transparent 100px
+    );
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        to right,
+        #333 0px,
+        #333 2px,
+        transparent 2px,
+        transparent 10px
+    );
 }
 
 .nav { 
@@ -90,6 +165,55 @@
     opacity: 1;
 }
 
+.followers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 100px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.follower-circle {
+    width: 110px;
+    background-color: rgb(192, 167, 137);
+    border: 2px solid #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    gap: 8px;
+    text-align: center;
+}
+
+.avatar-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-wrapper {
+    padding-left: 100px;
+    padding-right: 20px;
+    margin-top: 80px;
+}
+
+.content-wrapper .Pop {
+    margin-top: 20px;
+}
 
 .nat { 
     display: flex;
@@ -102,7 +226,7 @@
 
 .Pop {
     margin-left: 9%;
-    margin-top: 120px;
+    margin-top: 125px;
     font-size: 250%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;

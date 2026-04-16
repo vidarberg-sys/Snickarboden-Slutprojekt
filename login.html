@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snickarboden Meny</title>
+    <title>Inloggning - Snickarboden</title>
     <link rel="stylesheet" href="arga_snikcarn_hem.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            width: min(100%, 400px);
+            margin: 120px auto 0;
+            padding: 20px;
+            background-color: rgb(192, 167, 137);
+            border: 2px solid #333;
+            border-radius: 8px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input,
+        .login-container button {
+            display: block;
+            width: 100%;
+            margin: 0 auto 10px;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            background-color: rgb(236, 152, 88);
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: rgb(229, 176, 101);
+        }
+        .welcome {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-
 <body>
 
     <div class="navbar">
@@ -16,7 +51,6 @@
                 <a class="logo1" href="Arga_snickarn_korg.html">🛒</a>
                 <a class="logo1 profile-icon" href="login.html">👤</a>
             </div>
-
         </ul>
     </div>
 
@@ -33,7 +67,7 @@
                 <span class="label">Socialt</span>
             </div>
         </a>
-        <a class="barnavlg" href="Arga_Snickarn_social.html">
+        <a class="barnavlg" href="#">
             <div class="nav-item">
                 <span class="emoji">⬆️</span>
                 <span class="label">Ladda upp</span>
@@ -47,22 +81,10 @@
         </a>
     </div>
 
-    <ul class="nat">
-        <li class="Pop">Populär</li>
-        <li class="Pop2"><a href="Arga_Snickarn_butik.html">Visa alla</a></li>
-    </ul>
-    <div class="prdba">
-        <div id="card-container-pop"></div>
+    <div class="login-container" id="login-container">
+        <!-- Content will be populated by JS -->
     </div>
-    <ul class="nat">
-        <li class="Pop3">Nya</li>
-        <li class="Pop4"><a href="Arga_Snickarn_butik.html">Visa alla</a></li>
-    </ul>
-    <div class="prdba">
-        <div id="card-container-nya"></div>
-    </div>
-    <script src="Arga_snickarn_logicN.js"></script>
-    <script src="profile.js"></script>
 
+    <script src="login.js"></script>
 </body>
 </html>

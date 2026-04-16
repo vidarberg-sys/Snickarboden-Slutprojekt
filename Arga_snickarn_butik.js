@@ -1,54 +1,151 @@
 const butikGroups = [
     {
-        title: "Nyheter",
+        title: "Trä",
         linkText: "Visa alla",
         linkHref: "#",
         products: [
-            { namn: "Träskål", skapare: "Joakim", beskrivning: "En fin skål för köket.", bild: "bilder/IMG_2337.JPG" },
-            { namn: "Mini Oxe", skapare: "Joakim", beskrivning: "Stark inredningsdetalj.", bild: "bilder/IMG_2443.jpeg" },
-            { namn: "Fåtölj", skapare: "Joakim", beskrivning: "En bekväm liten stol.", bild: "bilder/IMG_2463.jpeg" },
-            { namn: "Krok", skapare: "Joakim", beskrivning: "Perfekt för hallen.", bild: "bilder/IMG_2480.jpeg" },
-            { namn: "Ljusstake", skapare: "Joakim", beskrivning: "Mysfaktor för hemmet.", bild: "bilder/IMG_2506.jpeg" },
-            { namn: "Bricka", skapare: "Joakim", beskrivning: "Praktisk och snygg.", bild: "bilder/IMG_2754.jpeg" },
-            { namn: "Träfigur", skapare: "Joakim", beskrivning: "Liten detalj för hyllan.", bild: "bilder/IMG_2758.jpeg" },
-            { namn: "Björn", skapare: "Joakim", beskrivning: "En liten träbjörn.", bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg" }
+            { 
+                id: "tra-1",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "En bit en till lång smala projekt.", 
+                bild: "bilder/IMG_2972.jpeg" 
+            },
+
+            { 
+                id: "tra-2",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "Mindre bit en aning tjock.", 
+                bild: "bilder/IMG_2973.jpeg"
+            },
+            { 
+                id: "tra-3",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "Kort tjock bit.", 
+                bild: "bilder/IMG_2974.jpeg" 
+            },
+            { 
+                id: "tra-4",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "Small medium lång bit.", 
+                bild: "bilder/IMG_2975.jpeg" 
+            },
+            { 
+                id: "tra-5",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "lång, aning tjock bit med kvist.", 
+                bild: "bilder/IMG_2976.jpeg" 
+            },
+            { 
+                id: "tra-6",
+                namn: "En", 
+                skapare: "Joakim", 
+                beskrivning: "Lång, aning tjock bit.", 
+                bild: "bilder/IMG_2977.jpeg" 
+            },
         ]
     },
     {
-        title: "Kampanj",
+        title: "Verktyg",
         linkText: "Visa alla",
         linkHref: "#",
         products: [
-            { namn: "Skedset", skapare: "Joakim", beskrivning: "Perfekt till köket.", bild: "bilder/IMG_2337.JPG" },
-            { namn: "Fågelhus", skapare: "Joakim", beskrivning: "Vacker utomhusdetalj.", bild: "bilder/IMG_2443.jpeg" },
-            { namn: "Bokstöd", skapare: "Joakim", beskrivning: "Stilig bokhållare.", bild: "bilder/IMG_2463.jpeg" },
-            { namn: "Pennhållare", skapare: "Joakim", beskrivning: "Ordning på skrivbordet.", bild: "bilder/IMG_2480.jpeg" },
-            { namn: "Fotoram", skapare: "Joakim", beskrivning: "Visa dina bästa minnen.", bild: "bilder/IMG_2506.jpeg" },
-            { namn: "Nyckelring", skapare: "Joakim", beskrivning: "Liten och praktisk.", bild: "bilder/IMG_2754.jpeg" },
-            { namn: "Vas", skapare: "Joakim", beskrivning: "Passar blommor fint.", bild: "bilder/IMG_2758.jpeg" },
-            { namn: "Askkopp", skapare: "Joakim", beskrivning: "Elegant liten ask.", bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg" }
+            { 
+                id: "verk-1",
+                namn: "Hyvel", 
+                skapare: "Joakim", 
+                beskrivning: "Fin hyvel för trä. Vast blad.", 
+                bild: "bilder/IMG_2978.jpeg" 
+            },
+            { 
+                id: "verk-2",
+                namn: "Skruvdragare", 
+                skapare: "Joakim", 
+                beskrivning: "Stark och pålitlig.", 
+                bild: "bilder/IMG_2980.jpeg" 
+            },
+            { 
+                id: "verk-3",
+                namn: "bitsSkruvmejsel", 
+                skapare: "Joakim", 
+                beskrivning: "Bra verktyg. Kan byta huvud.", 
+                bild: "bilder/IMG_2981.jpeg" 
+            },
+            { 
+                id: "verk-4",
+                namn: "Såg", 
+                skapare: "Joakim", 
+                beskrivning: "Bra verktyg.", 
+                bild: "bilder/Sågkamraten.jpg" 
+            },
         ]
     },
     {
-        title: "Toppval",
+        title: "Skapelser",
         linkText: "Visa alla",
         linkHref: "#",
         products: [
-            { namn: "Stol", skapare: "Joakim", beskrivning: "Små sittplatser i trä.", bild: "bilder/IMG_2337.JPG" },
-            { namn: "Skål", skapare: "Joakim", beskrivning: "Perfekt för frukost.", bild: "bilder/IMG_2443.jpeg" },
-            { namn: "Ljuslykta", skapare: "Joakim", beskrivning: "Skapar mysig stämning.", bild: "bilder/IMG_2463.jpeg" },
-            { namn: "Skohorn", skapare: "Joakim", beskrivning: "Praktiskt och snyggt.", bild: "bilder/IMG_2480.jpeg" },
-            { namn: "Serveringsfat", skapare: "Joakim", beskrivning: "Bra för gäster.", bild: "bilder/IMG_2506.jpeg" },
-            { namn: "Mobilladdare", skapare: "Joakim", beskrivning: "Trädesign till teknik.", bild: "bilder/IMG_2754.jpeg" },
-            { namn: "Bricka", skapare: "Joakim", beskrivning: "Perfekt för fika.", bild: "bilder/IMG_2758.jpeg" },
-            { namn: "Bokstöd", skapare: "Joakim", beskrivning: "Håller böcker stadigt.", bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg" }
+            { 
+                id: "skap-1",
+                namn: "Låda", 
+                skapare: "Joakim", 
+                beskrivning: "Rolig förvaring.", 
+                bild: "bilder/IMG_2982.jpeg" 
+            },
+            { 
+                id: "skap-2",
+                namn: "Laggkärl", 
+                skapare: "Du", 
+                beskrivning: "Bra för mycket vätska.", 
+                bild: "bilder/IMG_2983.jpeg" 
+            },
+            { 
+                id: "skap-3",
+                namn: "Smörknivar", 
+                skapare: "Du", 
+                beskrivning: "Fina och praktiska.", 
+                bild: "bilder/IMG_2984.jpeg" 
+            },
+            { 
+                id: "skap-4",
+                namn: "Björn", 
+                skapare: "Du", 
+                beskrivning: "Intressant figur.", 
+                bild: "bilder/IMG_2885.jpeg" 
+            },
+            { 
+                id: "skap-5",
+                namn: "Röd magik björn", 
+                skapare: "Du", 
+                beskrivning: "Rolig och gulig.", 
+                bild: "bilder/IMG_2851.jpeg" 
+            },
+            { 
+                id: "skap-6",
+                namn: "Lila magik björn", 
+                skapare: "Joakim", 
+                beskrivning: "Fin prydnad.", 
+                bild: "bilder/IMG_2823.jpeg" 
+            },
         ]
     }
 ];
 
+function addToCart(produkt) {
+    let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    cart.push(produkt);
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+    window.location.href = "Arga_snickarn_korg.html";
+}
+
 function createButikCard(product) {
     const card = document.createElement("div");
     card.className = "card";
+    card.id = product.id;
 
     card.innerHTML = `
         <div class="image-box">
@@ -59,7 +156,14 @@ function createButikCard(product) {
             <p>Av: ${product.skapare}</p>
             <p>${product.beskrivning}</p>
         </div>
+        <button class="cart-btn" data-product-id="${product.id}">🛒</button>
     `;
+
+    const cartBtn = card.querySelector(".cart-btn");
+    cartBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        addToCart(product);
+    });
 
     return card;
 }
@@ -91,3 +195,28 @@ function renderButikGroups() {
 }
 
 window.addEventListener("DOMContentLoaded", renderButikGroups);
+
+// Sidebar navigation expand/collapse
+const sideNav = document.getElementById("sideNav");
+const navItems = document.querySelectorAll(".nav-item");
+
+// Only add listeners if sideNav exists
+if (sideNav && navItems.length > 0) {
+    // Toggle expansion on hover
+    sideNav.addEventListener("mouseenter", () => {
+        sideNav.classList.add("expanded");
+    });
+
+    sideNav.addEventListener("mouseleave", () => {
+        sideNav.classList.remove("expanded");
+    });
+
+    // Optional: Add click handlers for nav items (you can add functionality here)
+    navItems.forEach(item => {
+        item.addEventListener("click", (e) => {
+            const label = item.querySelector(".label").textContent;
+            console.log("Clicked:", label);
+            // Add your navigation logic here
+        });
+    });
+}
