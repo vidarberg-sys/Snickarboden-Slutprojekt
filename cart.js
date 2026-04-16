@@ -1,4 +1,3 @@
-// Korg-display funktion
 function displayCart() {
     const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     const cartContainer = document.getElementById("cart-container");
@@ -34,7 +33,6 @@ function displayCart() {
     });
 }
 
-// Ta bort produkt från korg
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.splice(index, 1);
@@ -42,5 +40,4 @@ function removeFromCart(index) {
     displayCart();
 }
 
-// Visa korgen när sidan laddar
 document.addEventListener("DOMContentLoaded", displayCart);

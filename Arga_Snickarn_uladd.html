@@ -1,46 +1,10 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inloggning - Snickarboden</title>
+    <title>Document</title>
     <link rel="stylesheet" href="arga_snikcarn_hem.css">
-    <style>
-        .login-container {
-            max-width: 400px;
-            width: min(100%, 400px);
-            margin: 120px auto 0;
-            padding: 20px;
-            background-color: rgb(192, 167, 137);
-            border: 2px solid #333;
-            border-radius: 8px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-        }
-        .login-container input,
-        .login-container button {
-            display: block;
-            width: 100%;
-            margin: 0 auto 10px;
-            padding: 10px;
-            border: 2px solid #333;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .login-container button {
-            background-color: rgb(236, 152, 88);
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background-color: rgb(229, 176, 101);
-        }
-        .welcome {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
 
@@ -56,6 +20,7 @@
                 <a class="logo1" href="Arga_snickarn_korg.html">🛒</a>
                 <a class="logo1 profile-icon" href="login.html">👤</a>
             </div>
+
         </ul>
     </div>
 
@@ -86,11 +51,23 @@
         </a>
     </div>
 
-    <div class="login-container" id="login-container">
-        <!-- Content will be populated by JS -->
+    <div class="upload-container">
+        <h1>Ladda upp din produkt</h1>
+        <form id="upload-form">
+            <label for="product-name">Produktnamn:</label>
+            <input type="text" id="product-name" required>
+
+            <label for="product-description">Beskrivning:</label>
+            <textarea id="product-description" required></textarea>
+
+            <label for="product-image">Bild:</label>
+            <input type="file" id="product-image" accept="image/*" required>
+
+            <button type="submit">Ladda upp</button>
+        </form>
     </div>
 
-    <script src="login.js"></script>
+    <script src="upload.js"></script>
     <script src="profile.js"></script>
     <script src="theme.js"></script>
     <script src="mobile.js"></script>

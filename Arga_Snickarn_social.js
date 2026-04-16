@@ -37,6 +37,12 @@ const uploadedItems = [
     }
 ];
 
+// Load user uploaded products from localStorage
+function getAllUploadedItems() {
+    const userUploads = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
+    return uploadedItems.concat(userUploads);
+}
+
 function renderFollowers() {
     const container = document.getElementById("followers-container");
     if (!container) return;
@@ -77,7 +83,8 @@ function renderUploads() {
     const grid = document.getElementById("social-card-grid");
     if (!grid) return;
 
-    uploadedItems.forEach(item => {
+    const allItems = getAllUploadedItems();
+    allItems.forEach(item => {
         grid.appendChild(createUploadCard(item));
     });
 }

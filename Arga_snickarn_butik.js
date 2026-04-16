@@ -200,9 +200,7 @@ window.addEventListener("DOMContentLoaded", renderButikGroups);
 const sideNav = document.getElementById("sideNav");
 const navItems = document.querySelectorAll(".nav-item");
 
-// Only add listeners if sideNav exists
 if (sideNav && navItems.length > 0) {
-    // Toggle expansion on hover
     sideNav.addEventListener("mouseenter", () => {
         sideNav.classList.add("expanded");
     });
@@ -211,12 +209,10 @@ if (sideNav && navItems.length > 0) {
         sideNav.classList.remove("expanded");
     });
 
-    // Optional: Add click handlers for nav items (you can add functionality here)
     navItems.forEach(item => {
         item.addEventListener("click", (e) => {
             const label = item.querySelector(".label").textContent;
             console.log("Clicked:", label);
-            // Add your navigation logic here
         });
     });
 }

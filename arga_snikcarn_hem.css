@@ -65,7 +65,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    right: 0;
+    z-index: 1000;
     user-select: none;
 }
 
@@ -122,9 +123,47 @@
     left: 0;
     top: 0;
     user-select: none;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease;
     overflow: hidden;
     z-index: 5;
+}
+
+.barnav.mobile-hidden {
+    transform: translateX(-100%);
+}
+
+.barnav.mobile-hidden.active {
+    transform: translateX(0);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    background-color: rgb(236, 152, 88);
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .barnav.expanded {
@@ -208,47 +247,500 @@
 .content-wrapper {
     padding-left: 100px;
     padding-right: 20px;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .content-wrapper .Pop {
     margin-top: 20px;
 }
 
-.nat { 
+.upload-container {
+    max-width: 600px;
+    margin: 120px auto 0;
+    padding: 20px;
+    background-color: rgb(192, 167, 137);
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.upload-container h1 {
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.upload-container form {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-container label {
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.upload-container input,
+.upload-container textarea {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.upload-container textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.upload-container button {
+    padding: 10px;
+    background-color: rgb(236, 152, 88);
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+.upload-container button:hover {
+    background-color: rgb(229, 176, 101);
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 120px auto 0;
+    padding: 20px;
+    background-color: rgb(192, 167, 137);
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.settings-container h1, .settings-container h2 {
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.settings-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.settings-container label {
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.settings-container input,
+.settings-container select {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.settings-container button {
+    padding: 10px;
+    background-color: rgb(236, 152, 88);
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+.settings-container button:hover {
+    background-color: rgb(229, 176, 101);
+}
+
+.upload-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav {
+        font-size: 100%;
+    }
+
+    .logo1,
+    .profile-icon,
+    .hamburger {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0;
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo1 {
+        font-size: 24px;
+    }
+
+    .profile-icon {
+        font-size: 24px;
+    }
+
+    .nat {
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+    .Pop,
+    .Pop3 {
+        font-size: 2rem;
+    }
+
+    .Pop2,
+    .Pop4 {
+        font-size: 0.95rem;
+    }
+
+    .barnav {
+        /* Sidebar hidden by default on mobile via transform */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .card-grid,
+    #cart-container,
+    #card-container-pop,
+    #card-container-nya {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 15px;
+        justify-items: center;
+        margin: 20px auto 0;
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 8px;
+        font-size: 13px;
+        max-width: 360px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .image-box {
+        aspect-ratio: 4 / 3;
+    }
+
+    .text {
+        min-height: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .cart-btn {
+        bottom: 3px;
+        right: 3px;
+        width: 35px;
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .content-wrapper,
+    .followers-container,
+    .prdba,
+    .settings-container,
+    .upload-container,
+    .login-container,
+    #cart-container,
+    .cart-title,
+    .check {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 80px; /* Justera för gömd sidebar */
+    }
+
+    .cart-title {
+        margin-left: 0;
+    }
+
+    .check {
+        margin-left: 0;
+    }
+
+    .hero {
+        margin-top: 80px;
+        height: 250px; /* Mindre hero på mobil */
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+
+    .hero p {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+
+    .hero-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .Pop {
+        margin-left: 10px;
+        font-size: 200%;
+    }
+
+    .Pop2, .Pop4 {
+        margin-left: 10px;
+    }
+
+    .cart-title {
+        margin-left: 10px;
+        font-size: 200%;
+    }
+
+    .followers-container {
+        gap: 15px;
+    }
+
+    .follower-circle {
+        width: 90px;
+        height: 110px;
+        padding: 12px 8px;
+        gap: 6px;
+    }
+
+    .avatar-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avatar-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .follower-circle p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid,
+    #card-container-pop,
+    #card-container-nya,
+    #cart-container {
+        grid-template-columns: 1fr; /* 1 kolumn på mycket små skärmar */
+        gap: 10px;
+        justify-items: center;
+        margin: 20px auto 0;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .image-box {
+        aspect-ratio: 4 / 3;
+    }
+
+    .text {
+        min-height: 70px;
+        height: auto;
+        font-size: 11px;
+    }
+
+    .cart-btn {
+        width: 30px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 200px;
+        padding: 0;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
+
+    .hero-content {
+        max-width: none;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+
+    .Pop {
+        font-size: 180%;
+    }
+
+    .follower-circle {
+        width: 80px;
+        height: 100px;
+        padding: 10px 6px;
+    }
+
+    .avatar-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .avatar-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .follower-circle p {
+        font-size: 11px;
+    }
+
+    .settings-container,
+    .upload-container,
+    .login-container {
+        padding: 15px;
+    }
+
+    .settings-container h1,
+    .upload-container h1 {
+        font-size: 1.5em;
+    }
+}
+
+.hero {
+    height: 400px;
+    background-image: url('bilder/IMG_2983.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: 120px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(236, 152, 88);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+.hero-btn:hover {
+    background-color: rgb(229, 176, 101);
+}
+
+.nat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 24px 0 4px;
+    padding: 0 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     user-select: none;
 }
 
-.Pop {
-    margin-left: 9%;
-    margin-top: 125px;
-    font-size: 250%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: underline;
-    user-select: none;
-}
-
+.Pop,
 .Pop3 {
-    margin-left: 9%;
-    margin-top: 40px;
-    font-size: 250%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    font-size: 2.3rem;
     text-decoration: underline;
     user-select: none;
 }
 
-.Pop2 {
-    margin-top: 145px;
-    margin-left: 10px;
+.Pop2,
+.Pop4 {
+    margin: 0;
+    font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration-color: #333;
     color: #333;
     user-select: none;
+}
+
+.Pop2 a,
+.Pop4 a {
+    text-decoration: none;
+    color: inherit;
 }
 a{
     color:#333;
@@ -266,23 +758,24 @@ a{
 #card-container-pop,
 #card-container-nya {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:40px;
-    padding-left: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding-left: 20px;
     padding-right: 20px;
-    margin-top: 20px;
+    margin: 20px auto 0;
+    max-width: 1200px;
     user-select: none;
 }
 
 .card {
-    max-width: 200px;
+    width: 100%;
+    max-width: 100%;
     border: 2px solid #333;
     padding: 10px;
     background: rgb(192, 167, 137);
     border-radius: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position:relative;   
-    height:100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     user-select: none;
@@ -290,22 +783,25 @@ a{
 
 .image-box {
     width: 100%;
-    height: 120px;
+    aspect-ratio: 4 / 3;
     border: 2px solid #333;
     margin-bottom: 10px;
+    overflow: hidden;
     user-select: none;
 }
 
 .bild {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
     user-select: none;
 }
 
 .text {
     font-size: 14px;
     min-height: 90px;
-    height: 90px;
+    height: auto;
     overflow: hidden;
     user-select: none;
 }
@@ -327,10 +823,20 @@ a{
     user-select: none;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(247, 186, 134);
 }
 
+.hero {
+    left: 0;
+    right: 0;
+}
 
 .cart-btn,
 .remove-btn {
@@ -366,10 +872,14 @@ body {
     background-color:rgb(236, 152, 88);
     height: 100%;
     width: 100%;
-    padding-top: 1px;
+    padding-top: 6px;
     border-radius: 15px;
     padding-bottom:40px ;
     user-select: none;
+}
+
+#butik-sections {
+    padding-top: 120px;
 }
 
 .cart-title {
@@ -425,6 +935,28 @@ body {
     user-select: none;
 }
 
+@media (max-width: 768px) {
+    #cart-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 15px;
+    }
+
+    #cart-container .card {
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cart-title,
+    .check,
+    .empty-message {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
 
 .logobx{
     display: flex;

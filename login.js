@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("login-container");
 
     if (user) {
-        // Already logged in
         container.innerHTML = `
             <h2>Välkommen, ${user.name}!</h2>
             <div class="welcome">
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
             location.reload();
         });
     } else {
-        // Login form
         container.innerHTML = `
             <h2>Logga in</h2>
             <input type="text" id="name-input" placeholder="Ditt namn" required>
@@ -40,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Update profile icon
     updateProfileIcon();
 });
 
