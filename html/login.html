@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inloggning - Snickarboden</title>
-    <link rel="stylesheet" href="arga_snikcarn_hem.css">
+        <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
     <style>
         .login-container {
             max-width: 400px;
@@ -19,6 +30,7 @@
         }
         .login-container h2 {
             margin-bottom: 20px;
+            font-family: 'Ubuntu', sans-serif;
         }
         .login-container input,
         .login-container button {
@@ -44,7 +56,7 @@
 </head>
 <body>
 
-    <div class="navbar">
+    <header class="navbar">
         <ul class="nav">
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -57,9 +69,7 @@
                 <a class="logo1 profile-icon" href="login.html">👤</a>
             </div>
         </ul>
-    </div>
-
-    <div class="barnav mobile-hidden" id="sideNav">
+    </header><aside class="barnav mobile-hidden" id="sideNav">
         <a class="barnavlg" href="Arga_Snickarn_butik.html">
             <div class="nav-item nav-item-top">
                 <span class="emoji">🛍️</span>
@@ -84,15 +94,26 @@
                 <span class="label">Inställningar</span>
             </div>
         </a>
-    </div>
+    </aside>
 
-    <div class="login-container" id="login-container">
-        <!-- Content will be populated by JS -->
-    </div>
-
-    <script src="login.js"></script>
-    <script src="profile.js"></script>
-    <script src="theme.js"></script>
-    <script src="mobile.js"></script>
+    <main>
+        <section class="login-container" id="login-container">
+            <!-- Content will be populated by JS -->
+        </section>
+    </main><script src="../js/login.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/mobile.js"></script>
+<footer>
+    <h3>Kontaktinformation</h3>
+    <p>E-post: vidar.berg@skola.taby.se</p>
+    <p>Telefon: 076-943 39 97</p>
+    <p>Adress: Snickarboden AB, Trädgårdsgatan 10, 111 53 Stockholm</p>
+</footer>
 </body>
 </html>
+
+
+
+
+

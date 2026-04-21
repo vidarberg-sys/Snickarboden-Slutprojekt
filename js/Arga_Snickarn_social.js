@@ -1,9 +1,9 @@
 const followers = [
-    { name: "Fabian Samuelsson", image: "bilder/IMG_2337.JPG" },
-    { name: "Fredrik Wallden ", image: "bilder/IMG_2443.jpeg" },
-    { name: "Blackie Ritchmore", image: "bilder/IMG_2463.jpeg" },
-    { name: "Carl Coleman", image: "bilder/IMG_2978.jpeg" },
-    { name: "Freya Butterworth", image: "bilder/IMG_2506.jpeg" }
+    { name: "Fabian Samuelsson", image: "../bilder/IMG_2337.JPG" },
+    { name: "Fredrik Wallden ", image: "../bilder/IMG_2443.jpeg" },
+    { name: "Blackie Ritchmore", image: "../bilder/IMG_2463.jpeg" },
+    { name: "Carl Coleman", image: "../bilder/IMG_2978.jpeg" },
+    { name: "Freya Butterworth", image: "../bilder/IMG_2506.jpeg" }
 ];
 
 const uploadedItems = [
@@ -12,32 +12,32 @@ const uploadedItems = [
         namn: "Laggkärl",
         skapare: "Du",
         beskrivning: "Bra för mycket vätska.",
-        bild: "bilder/IMG_2983.jpeg"
+        bild: "../bilder/IMG_2983.jpeg"
     },
     {
         id: "up-2",
         namn: "Smörknivar",
         skapare: "Du",
         beskrivning: "Fina och praktiska.",
-        bild: "bilder/IMG_2984.jpeg"
+        bild: "../bilder/IMG_2984.jpeg"
     },
     {
         id: "up-3",
         namn: "Björn",
         skapare: "Du",
         beskrivning: "Intressant figur.",
-        bild: "bilder/IMG_2885.jpeg"
+        bild: "../bilder/IMG_2885.jpeg"
     },
     {
         id: "up-4",
         namn: "Röd magik björn",
         skapare: "Du",
         beskrivning: "Rolig och gulig.",
-        bild: "bilder/IMG_2851.jpeg"
+        bild: "../bilder/IMG_2851.jpeg"
     }
 ];
 
-// Load user uploaded products from localStorage
+
 function getAllUploadedItems() {
     const userUploads = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
     return uploadedItems.concat(userUploads);
@@ -81,11 +81,17 @@ function createUploadCard(item) {
 
 function renderUploads() {
     const grid = document.getElementById("social-card-grid");
-    if (!grid) return;
+    if (!grid) {
+        console.error("social-card-grid not found");
+        return;
+    }
 
     const allItems = getAllUploadedItems();
+    console.log("All items to render:", allItems);
     allItems.forEach(item => {
-        grid.appendChild(createUploadCard(item));
+        const card = createUploadCard(item);
+        grid.appendChild(card);
+        console.log("Appended card for:", item.namn);
     });
 }
 

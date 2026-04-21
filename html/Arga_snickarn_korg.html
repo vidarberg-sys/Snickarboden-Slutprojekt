@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snickarboden Meny</title>
-    <link rel="stylesheet" href="arga_snikcarn_hem.css">
+    <title>Min Korg</title>
+        <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
-
 <body>
 
-    <div class="navbar">
+    <header class="navbar">
         <ul class="nav">
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -23,9 +28,7 @@
             </div>
 
         </ul>
-    </div>
-
-    <div class="barnav mobile-hidden" id="sideNav">
+    </header><aside class="barnav mobile-hidden" id="sideNav">
         <a class="barnavlg" href="Arga_Snickarn_butik.html">
             <div class="nav-item nav-item-top">
                 <span class="emoji">🛍️</span>
@@ -38,7 +41,7 @@
                 <span class="label">Socialt</span>
             </div>
         </a>
-        <a class="barnavlg" href="Arga_Snickarn_uladd.html">
+        <a class="barnavlg" href="#">
             <div class="nav-item">
                 <span class="emoji">⬆️</span>
                 <span class="label">Ladda upp</span>
@@ -50,34 +53,26 @@
                 <span class="label">Inställningar</span>
             </div>
         </a>
-    </div>
+    </aside>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Välkommen till Snickarboden</h1>
-            <p>Upptäck unika träarbeten och hantverk från lokala snickare</p>
-            <a href="Arga_Snickarn_butik.html" class="hero-btn">Utforska Butiken</a>
-        </div>
+    <main>
+        <section>
+            <h1 class="cart-title">Min Korg</h1>
+            <div id="cart-container"></div>
+        </section>
+    </main><script src="../js/Arga_snickarn_logicN.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/mobile.js"></script>
+    
+    <div> 
+        <p class="check">Checkout</p>
     </div>
-
-    <ul class="nat">
-        <li class="Pop">Populär</li>
-        <li class="Pop2"><a href="Arga_Snickarn_butik.html">Visa alla</a></li>
-    </ul>
-    <div class="prdba">
-        <div id="card-container-pop"></div>
-    </div>
-    <ul class="nat">
-        <li class="Pop3">Nya</li>
-        <li class="Pop4"><a href="Arga_Snickarn_butik.html">Visa alla</a></li>
-    </ul>
-    <div class="prdba">
-        <div id="card-container-nya"></div>
-    </div>
-    <script src="Arga_snickarn_logicN.js"></script>
-    <script src="profile.js"></script>
-    <script src="theme.js"></script>
-    <script src="mobile.js"></script>
 
 </body>
 </html>
+
+
+
+

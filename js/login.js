@@ -18,22 +18,29 @@ document.addEventListener("DOMContentLoaded", function() {
         container.innerHTML = `
             <h2>Logga in</h2>
             <input type="text" id="name-input" placeholder="Ditt namn" required>
+            <input type="email" id="email-input" placeholder="Din e-post" required>
             <input type="file" id="image-input" accept="image/*" required>
             <button id="login-btn">Logga in</button>
         `;
         document.getElementById("login-btn").addEventListener("click", function() {
             const name = document.getElementById("name-input").value;
+            const email = document.getElementById("email-input").value;
             const file = document.getElementById("image-input").files[0];
-            if (name && file) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Ange en giltig e-postadress");
+                return;
+            }
+            if (name && email && file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    const user = { name: name, image: e.target.result };
+                    const user = { id: "user-" + Date.now(), name: name, email: email, image: e.target.result };
                     localStorage.setItem("user", JSON.stringify(user));
                     location.reload();
                 };
                 reader.readAsDataURL(file);
             } else {
-                alert("Fyll i namn och välj en bild!");
+                alert("Fyll i namn, e-post och välj en bild!");
             }
         });
     }

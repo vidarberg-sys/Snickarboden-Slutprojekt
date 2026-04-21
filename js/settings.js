@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <label for="user-name">Namn:</label>
             <input type="text" id="user-name" value="${user.name}" required>
 
+            <label for="user-email">E-post:</label>
+            <input type="email" id="user-email" value="${user.email || ''}" required>
+
             <label for="user-image">Ny bild:</label>
             <input type="file" id="user-image" accept="image/*">
 
@@ -87,5 +90,6 @@ function deleteUpload(id) {
     uploads = uploads.filter(item => item.id !== id);
     localStorage.setItem("uploadedProducts", JSON.stringify(uploads));
     alert("Uppladning borttagen!");
-    document.getElementById("view-uploads").click(); // Refresh list
+    document.getElementById("view-uploads").click(); 
 }
+

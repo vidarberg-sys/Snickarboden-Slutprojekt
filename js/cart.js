@@ -41,3 +41,4 @@ function removeFromCart(index) {
 }
 
 document.addEventListener("DOMContentLoaded", displayCart);
+

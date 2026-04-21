@@ -4,56 +4,56 @@ const produkterPop = [
         namn: "Björn",
         skapare: "Joakim Lundell",
         beskrivning: "Det är en björn.Galet liksom.",
-        bild: "bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg",
+        bild: "../bilder/157DFFCC-0981-45F4-9D5C-F4063C637C26.jpg",
     },
     {
         id: "prod-2",
         namn: "Björn",
         skapare: "Joakim Babybel",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "bilder/IMG_2337.JPG"
+        bild: "../bilder/IMG_2337.JPG"
     },
     {
         id: "prod-3",
         namn: "Katt",
         skapare: "Joakim Luleå Bortaställ",
         beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once. Det må inte vara hans bästa verk men det är en katt iallafall.kanske inte världens bästa.",
-        bild: "bilder/IMG_2443.jpeg"
+        bild: "../bilder/IMG_2443.jpeg"
     },
     {
         id: "prod-4",
         namn: "A STARGAZER",
         skapare: "Joakim Hemmakväll",
         beskrivning: "I SEE A RAINBOW RISING.",
-        bild: "bilder/IMG_2463.jpeg"
+        bild: "../bilder/IMG_2463.jpeg"
     },
     {
         id: "prod-5",
         namn: "Kannin",
         skapare: "Joakim Bersamell",
         beskrivning: "En till björn.",
-        bild: "bilder/IMG_2480.jpeg"
+        bild: "../bilder/IMG_2480.jpeg"
     },
     {
         id: "prod-6",
         namn: "Tvärbjörn",
         skapare: "Joakim Internationel",
         beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once. gggg",
-        bild: "bilder/IMG_2506.jpeg"
+        bild: "../bilder/IMG_2506.jpeg"
     },
     {
         id: "prod-7",
         namn: "Hund",
         skapare: "Joakim Katskräll",
         beskrivning: "Tog mig 7 minuter att göra denna björn.",
-        bild: "bilder/IMG_2754.jpeg"
+        bild: "../bilder/IMG_2754.jpeg"
     },
     {
         id: "prod-8",
         namn: "Nyckelpiga",
         skapare: "Joakim Scandic Hotel",
         beskrivning: "En till björn.",
-        bild: "bilder/IMG_2758.jpeg"
+        bild: "../bilder/IMG_2758.jpeg"
     }
 ];
 
@@ -72,7 +72,7 @@ function renderCards(produkter, containerId) {
 
         card.innerHTML = `
             <div class="image-box">
-                <img src="${produkt.bild}" class="bild">
+                <img src="${produkt.bild}" class="bild" alt="${produkt.namn}">
             </div>
 
             <div class="text">

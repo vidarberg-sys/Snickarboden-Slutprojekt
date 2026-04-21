@@ -1,0 +1,44 @@
+:root {
+    --primary-bg: rgb(236, 152, 88);
+    --primary-light: rgb(229, 176, 101);
+    --secondary-bg: rgb(235, 183, 110);
+    --tertiary-bg: rgb(192, 167, 137);
+    --page-bg: rgb(247, 186, 134);
+    --navbar-bg: rgb(229, 176, 101);
+    --text-color: #000000;
+    --border-color: #000000;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-lg: 16px;
+    --font-size-xl: 1.1em;
+    
+    --spacing-sm: 8px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 15px;
+    --radius-round: 50%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+}
+
+a {
+    color: var(--text-color);
+    user-select: none;
+    text-decoration: none;
+}
+

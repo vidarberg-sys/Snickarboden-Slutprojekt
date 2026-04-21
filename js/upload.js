@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
+    if (!user.id) {
+        alert("Ditt konto behöver uppdateras. Logga ut och in igen.");
+        return;
+    }
+
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
@@ -22,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: "user-" + Date.now(),
                     namn: name,
                     skapare: user.name,
+                    userId: user.id,
                     beskrivning: description,
                     bild: e.target.result
                 };
@@ -29,9 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 let uploadedProducts = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
                 uploadedProducts.push(product);
                 localStorage.setItem("uploadedProducts", JSON.stringify(uploadedProducts));
+                console.log("Saved product:", product);
+                console.log("All uploaded products:", uploadedProducts);
 
                 alert("Produkt uppladdad!");
                 form.reset();
+                window.location.href = "Arga_Snickarn_social.html";
             };
             reader.readAsDataURL(file);
         } else {

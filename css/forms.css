@@ -1,0 +1,99 @@
+.upload-container,
+.settings-container,
+.login-container {
+    max-width: 600px;
+    margin: 120px auto 0;
+    padding: var(--spacing-lg);
+    background-color: var(--tertiary-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.upload-container h1,
+.settings-container h1,
+.login-container h1 {
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-family);
+}
+
+.settings-container h2 {
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-family);
+}
+
+.upload-container form,
+.settings-container form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: 30px;
+}
+
+.upload-container label,
+.settings-container label {
+    text-align: left;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+.upload-container input,
+.upload-container textarea,
+.settings-container input,
+.settings-container select {
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family);
+}
+
+.upload-container textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.upload-container button,
+.settings-container button,
+.login-container button {
+    padding: var(--spacing-md);
+    background-color: var(--primary-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.upload-container button:hover,
+.settings-container button:hover,
+.login-container button:hover {
+    background-color: var(--primary-light);
+}
+
+.login-container button {
+    background-color: var(--primary-bg);
+}
+
+.login-container button:hover {
+    background-color: var(--primary-light);
+}
+
+.upload-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    margin: 5px 0;
+}
+
+#profile-container {
+    display: inline-flex;
+}
+
+.welcome {
+    margin-bottom: var(--spacing-lg);
+}
+

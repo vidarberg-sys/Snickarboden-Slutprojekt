@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="arga_snikcarn_hem.css">
+        <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
-    <div class="navbar">
+    <header class="navbar">
         <ul class="nav">
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -22,9 +28,7 @@
             </div>
 
         </ul>
-    </div>
-
-    <div class="barnav mobile-hidden" id="sideNav">
+    </header><aside class="barnav mobile-hidden" id="sideNav">
         <a class="barnavlg" href="Arga_Snickarn_butik.html">
             <div class="nav-item nav-item-top">
                 <span class="emoji">🛍️</span>
@@ -49,13 +53,39 @@
                 <span class="label">Inställningar</span>
             </div>
         </a>
-    </div>
+    </aside>
 
-    <div id="butik-sections"></div>
+    <main>
+        <section class="upload-container">
+            <h1>Ladda upp din produkt</h1>
+            <form id="upload-form">
+                <label for="product-name">Produktnamn:</label>
+                <input type="text" id="product-name" required>
 
-    <script src="Arga_snickarn_butik.js"></script>
-    <script src="profile.js"></script>
-    <script src="theme.js"></script>
-    <script src="mobile.js"></script>
+                <label for="product-description">Beskrivning:</label>
+                <textarea id="product-description" required></textarea>
+
+                <label for="product-image">Bild:</label>
+                <input type="file" id="product-image" accept="image/*" required>
+
+                <button type="submit">Ladda upp</button>
+            </form>
+        </section>
+    </main><script src="../js/upload.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/mobile.js"></script>
+<footer>
+    <h3>Kontaktinformation</h3>
+    <p>E-post: vidar.berg@skola.taby.se</p>
+    <p>Telefon: 076-943 39 97</p>
+    <p>Adress: Snickarboden AB, Trädgårdsgatan 10, 111 53 Stockholm</p>
+</footer>
 </body>
 </html>
+
+
+
+
+
+
