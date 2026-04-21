@@ -43,6 +43,10 @@
         display: flex;
     }
 
+    .nav-item .emoji {
+        font-size: 50px;
+    }
+
     .card-grid,
     #cart-container,
     #card-container-pop,
@@ -145,19 +149,18 @@
 
     .follower-circle {
         width: 90px;
-        height: 110px;
         padding: 12px var(--spacing-sm);
         gap: var(--spacing-sm);
     }
 
     .avatar-box {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .avatar-img {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .follower-circle p {
@@ -183,6 +186,26 @@
     .empty-message {
         margin-left: var(--spacing-md);
         margin-right: var(--spacing-md);
+    }
+
+    /* Table responsivity */
+    .table-section {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .table-section h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .data-table {
+        font-size: 14px;
+    }
+
+    .table-header th,
+    .data-table td {
+        padding: 10px 8px;
     }
 }
 
@@ -255,20 +278,27 @@
         font-size: 180%;
     }
 
+    .nav-item .emoji {
+        font-size: 60px;
+    }
+
+    .nav-item {
+        padding: var(--spacing-xl);
+    }
+
     .follower-circle {
         width: 80px;
-        height: 100px;
         padding: var(--spacing-md) 6px;
     }
 
     .avatar-box {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 
     .avatar-img {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 
     .follower-circle p {
@@ -284,6 +314,49 @@
     .settings-container h1,
     .upload-container h1 {
         font-size: 1.5em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .barnav {
+        width: 130px;
+    }
+
+    .barnav.expanded {
+        width: 290px;
+    }
+
+    .nav-item .emoji {
+        font-size: 70px;
+    }
+
+    .nav-item {
+        padding: var(--spacing-xl);
+    }
+
+    .settings-container,
+    .upload-container,
+    .login-container {
+        padding: 40px;
+        font-size: 1.4em;
+    }
+
+    .settings-container h1,
+    .upload-container h1 {
+        font-size: 2.5em;
+    }
+
+    .settings-container input,
+    .settings-container select,
+    .settings-container button,
+    .settings-container textarea {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .settings-container textarea {
+        height: 250px;
+        resize: vertical;
     }
 }
 

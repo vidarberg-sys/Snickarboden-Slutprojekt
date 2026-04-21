@@ -47,18 +47,25 @@
 
 .hero-btn {
     display: inline-block;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 14px 28px;
     background-color: var(--primary-bg);
     color: var(--text-color);
     text-decoration: none;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     font-family: var(--font-family);
     font-size: var(--font-size-xl);
-    transition: background-color 0.2s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--border-color);
+    letter-spacing: 0.5px;
 }
 
 .hero-btn:hover {
     background-color: var(--primary-light);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    letter-spacing: 1px;
 }
 
 .card-grid,
@@ -69,7 +76,7 @@
     gap: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     max-width: 1200px;
     user-select: none;
 }
@@ -86,6 +93,13 @@
     display: flex;
     flex-direction: column;
     user-select: none;
+    transition: all 0.4s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
 }
 
 .image-box {
@@ -122,6 +136,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     user-select: none;
+    font-size: 1.05em;
+    letter-spacing: 0.3px;
 }
 
 .text p:last-child {
@@ -269,5 +285,119 @@
 
 .remove-btn {
     background-color: var(--danger-color);
+}
+
+/* Table Styles */
+.table-section {
+    padding-left: 100px;
+    padding-right: 20px;
+    padding-top: 140px;
+    padding-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+}
+
+.table-section h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-table thead {
+    background-color: var(--primary-bg);
+}
+
+.table-header {
+    background-color: var(--primary-bg);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-header th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: var(--text-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.table-header th:last-child {
+    border-right: none;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(236, 152, 88, 0.1);
+}
+
+.data-table td {
+    padding: 15px;
+    text-align: left;
+    border-right: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.data-table td:last-child {
+    border-right: none;
+}
+
+/* Alternating row colors */
+.table-row-1 {
+    background-color: rgb(240, 200, 160);
+}
+
+.table-row-2 {
+    background-color: rgb(245, 215, 180);
+}
+
+.table-row-3 {
+    background-color: rgb(240, 200, 160);
+}
+
+.table-row-4 {
+    background-color: rgb(245, 215, 180);
+}
+
+.table-row-5 {
+    background-color: rgb(240, 200, 160);
+}
+
+/* Footer styling - different from other rows */
+.table-footer {
+    background-color: var(--secondary-bg);
+    font-weight: bold;
+    border-top: 2px solid var(--border-color);
+}
+
+.table-footer td {
+    padding: 20px 15px;
+    text-align: right;
+    color: var(--text-color);
+}
+
+.table-footer td:first-child {
+    text-align: left;
+}
+
+/* Input and Textarea Global Styles */
+textarea {
+    font-family: var(--font-family);
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
 }
 

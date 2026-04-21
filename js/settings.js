@@ -33,6 +33,20 @@ document.addEventListener("DOMContentLoaded", function() {
         <h2>Hantera uppladdningar</h2>
         <button id="view-uploads">Visa mina uppladdningar</button>
         <div id="uploads-list"></div>
+
+        <h2>Kontaktformulär</h2>
+        <form id="contact-form">
+            <label for="contact-email">E-postadress:</label>
+            <input type="email" id="contact-email" placeholder="Din e-postadress" required>
+
+            <label for="contact-subject">Ärenderad:</label>
+            <input type="text" id="contact-subject" placeholder="Vad handlar det om?" required>
+
+            <label for="contact-message">Meddelande:</label>
+            <textarea id="contact-message" placeholder="Skriv ditt meddelande här..." required></textarea>
+
+            <button type="submit">Skicka meddelande</button>
+        </form>
     `;
 
 
@@ -81,6 +95,49 @@ document.addEventListener("DOMContentLoaded", function() {
                 <button onclick="deleteUpload('${item.id}')">Ta bort</button>
             </div>
         `).join("");
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const email = document.getElementById("contact-email").value.trim();
+        const subject = document.getElementById("contact-subject").value.trim();
+        const message = document.getElementById("contact-message").value.trim();
+
+        // Validering
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Ange en giltig e-postadress");
+            document.getElementById("contact-email").focus();
+            return;
+        }
+
+        if (subject.length < 3) {
+            alert("Ärenderad måste vara minst 3 tecken");
+            document.getElementById("contact-subject").focus();
+            return;
+        }
+
+        if (message.length < 10) {
+            alert("Meddelandet måste vara minst 10 tecken");
+            document.getElementById("contact-message").focus();
+            return;
+        }
+
+        const contactMessage = {
+            id: "contact-" + Date.now(),
+            userEmail: email,
+            subject: subject,
+            message: message,
+            date: new Date().toLocaleString("sv-SE"),
+            userName: user.name
+        };
+
+        let messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+        messages.push(contactMessage);
+        localStorage.setItem("contactMessages", JSON.stringify(messages));
+
+        alert("Meddelandet har skickats! Tack för att du kontaktade oss.");
+        document.getElementById("contact-form").reset();
     });
 });
 

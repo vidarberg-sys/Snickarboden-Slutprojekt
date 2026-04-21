@@ -6,7 +6,11 @@
     --page-bg: rgb(247, 186, 134);
     --navbar-bg: rgb(229, 176, 101);
     --text-color: #000000;
+    --text-light: #333333;
     --border-color: #000000;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
     --success-color: #28a745;
     --danger-color: #dc3545;
     
@@ -14,6 +18,8 @@
     --font-size-base: 14px;
     --font-size-lg: 16px;
     --font-size-xl: 1.1em;
+    --line-height-base: 1.6;
+    --letter-spacing-base: 0.3px;
     
     --spacing-sm: 8px;
     --spacing-md: 15px;
@@ -34,6 +40,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--page-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
 }
 
 a {

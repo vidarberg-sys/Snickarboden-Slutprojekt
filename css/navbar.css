@@ -12,6 +12,8 @@
     right: 0;
     z-index: 1000;
     user-select: none;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.5px;
 }
 
 .navbar::before {
@@ -74,6 +76,14 @@
     border-radius: var(--radius-sm);
     display: inline-flex;
     align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.logo1:hover {
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .logobx {
@@ -98,6 +108,13 @@
     cursor: pointer;
     text-decoration: none;
     color: var(--text-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-icon:hover {
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .profile-icon img {
@@ -116,8 +133,9 @@
     top: 0;
     user-select: none;
     transition: transform 0.3s ease;
-    overflow: hidden;
-    z-index: 5;
+    overflow: visible;
+    z-index: 999;
+    padding-top: 100px;
 }
 
 .barnav.mobile-hidden {
@@ -141,21 +159,32 @@
     align-items: center;
     padding: var(--spacing-md);
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
+    gap: 0;
+}
+
+.barnav.expanded .nav-item {
     gap: var(--spacing-md);
 }
 
 .nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-item-top {
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 .nav-item .emoji {
     font-size: 40px;
     flex-shrink: 0;
+    position: relative;
+}
+
+.barnav:not(.expanded) .nav-item .emoji {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-item .label {
@@ -164,9 +193,15 @@
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 1000;
 }
 
 .barnav.expanded .nav-item .label {
+    opacity: 1;
+}
+
+.barnav:not(.expanded) .nav-item:hover .label {
     opacity: 1;
 }
 
@@ -178,6 +213,12 @@
     background-color: var(--primary-bg);
     border-radius: var(--radius-sm);
     margin-right: var(--spacing-md);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hamburger span {

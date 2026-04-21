@@ -8,8 +8,21 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="welcome">
                 <img src="${user.image}" alt="Profile" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333;">
             </div>
+            <a href="Test.html" class="test-page-btn" style="display: block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; margin-bottom: 10px; cursor: pointer; border: 2px solid #1e7e34; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Visa Test Sida</a>
             <button id="logout-btn">Logga ut</button>
         `;
+        
+        // Lägg till hover-effekt för test-page-btn
+        const testBtn = container.querySelector(".test-page-btn");
+        testBtn.addEventListener("mouseover", function() {
+            this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
+            this.style.transform = "translateY(-2px)";
+        });
+        testBtn.addEventListener("mouseout", function() {
+            this.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+            this.style.transform = "translateY(0)";
+        });
+        
         document.getElementById("logout-btn").addEventListener("click", function() {
             localStorage.removeItem("user");
             location.reload();
@@ -23,14 +36,29 @@ document.addEventListener("DOMContentLoaded", function() {
             <button id="login-btn">Logga in</button>
         `;
         document.getElementById("login-btn").addEventListener("click", function() {
-            const name = document.getElementById("name-input").value;
-            const email = document.getElementById("email-input").value;
+            const name = document.getElementById("name-input").value.trim();
+            const email = document.getElementById("email-input").value.trim();
             const file = document.getElementById("image-input").files[0];
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert("Ange en giltig e-postadress");
+            
+            if (!name) {
+                alert("Vänligen ange ditt namn");
+                document.getElementById("name-input").focus();
                 return;
             }
+            
+            if (!emailRegex.test(email)) {
+                alert("Ange en giltig e-postadress");
+                document.getElementById("email-input").focus();
+                return;
+            }
+            
+            if (!file) {
+                alert("Vänligen välj en profilbild");
+                document.getElementById("image-input").focus();
+                return;
+            }
+            
             if (name && email && file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
@@ -39,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     location.reload();
                 };
                 reader.readAsDataURL(file);
-            } else {
-                alert("Fyll i namn, e-post och välj en bild!");
             }
         });
     }
