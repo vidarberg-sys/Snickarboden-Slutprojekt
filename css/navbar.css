@@ -1,9 +1,6 @@
 .navbar {
     background-color: var(--navbar-bg);
-    padding-left: 100px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 20px 20px 100px;
     width: 100%;
     box-sizing: border-box;
     position: fixed;
@@ -57,19 +54,15 @@
     padding: 0;
     font-size: 150%;
     font-family: var(--font-family);
-    user-select: none;
 }
 
 .current {
     color: var(--text-color);
     font-size: 165%;
-    font-family: var(--font-family);
-    user-select: none;
 }
 
 .logo1 {
     text-decoration: none;
-    user-select: none;
     font-size: 40px;
     padding: var(--spacing-sm) 12px;
     background-color: var(--primary-bg);
@@ -78,7 +71,6 @@
     align-items: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
 }
 
 .logo1:hover {
@@ -91,7 +83,6 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    user-select: none;
     margin-right: 30px;
 }
 
@@ -121,7 +112,6 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-round);
-    display: block;
 }
 
 .barnav {
@@ -131,11 +121,15 @@
     width: 80px;
     left: 0;
     top: 0;
-    user-select: none;
-    transition: transform 0.3s ease;
-    overflow: visible;
-    z-index: 999;
     padding-top: 100px;
+    user-select: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .barnav.mobile-hidden {
@@ -157,6 +151,7 @@
 .nav-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: var(--spacing-md);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -172,19 +167,12 @@
 }
 
 .nav-item-top {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .nav-item .emoji {
     font-size: 40px;
     flex-shrink: 0;
-    position: relative;
-}
-
-.barnav:not(.expanded) .nav-item .emoji {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .nav-item .label {
@@ -193,8 +181,6 @@
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
-    position: relative;
-    z-index: 1000;
 }
 
 .barnav.expanded .nav-item .label {
@@ -241,3 +227,17 @@
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+
+@media (max-width: 1024px) {
+    .barnav {
+        align-items: center; 
+    }
+
+    .nav-item {
+        justify-content: center; 
+    }
+
+    .nav-item .label {
+        display: none; 
+    }
+}
