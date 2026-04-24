@@ -70,7 +70,7 @@ const butikGroups = [
             },
             { 
                 id: "verk-3",
-                namn: "bitsSkruvmejsel", 
+                namn: "bitsskruvmejsel", 
                 skapare: "Joakim", 
                 beskrivning: "Bra verktyg. Kan byta huvud.", 
                 bild: "../bilder/IMG_2981.jpeg" 

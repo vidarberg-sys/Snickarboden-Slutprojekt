@@ -287,7 +287,6 @@
     background-color: var(--danger-color);
 }
 
-/* Table Styles */
 .table-section {
     padding-left: 100px;
     padding-right: 20px;
@@ -355,7 +354,6 @@
     border-right: none;
 }
 
-/* Alternating row colors */
 .table-row-1 {
     background-color: rgb(240, 200, 160);
 }
@@ -376,7 +374,6 @@
     background-color: rgb(240, 200, 160);
 }
 
-/* Footer styling - different from other rows */
 .table-footer {
     background-color: var(--secondary-bg);
     font-weight: bold;
@@ -393,7 +390,6 @@
     text-align: left;
 }
 
-/* Input and Textarea Global Styles */
 textarea {
     font-family: var(--font-family);
     resize: vertical;
@@ -401,3 +397,10 @@ textarea {
     line-height: 1.5;
 }
 
+@media (max-width: 1024px) {
+    .card .cart-btn,.remove-btn {
+        width: 60px !important;
+        height: 40px !important;
+        font-size: 24px !important;
+    }
+}

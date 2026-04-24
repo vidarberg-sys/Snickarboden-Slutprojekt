@@ -17,7 +17,7 @@ const produkterPop = [
         id: "prod-3",
         namn: "Katt",
         skapare: "Joakim Luleå Bortaställ",
-        beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once. Det må inte vara hans bästa verk men det är en katt iallafall.kanske inte världens bästa.",
+        beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once. Det må inte vara hans bästa verk men det är en katt iallafall.",
         bild: "../bilder/IMG_2443.jpeg"
     },
     {
@@ -38,7 +38,7 @@ const produkterPop = [
         id: "prod-6",
         namn: "Tvärbjörn",
         skapare: "Joakim Internationel",
-        beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once. gggg",
+        beskrivning: "Tog mig 7 minuter att göra denna björn.men you know me bro. lisksom jag är crazy like that bro. crazy i was crazy once.",
         bild: "../bilder/IMG_2506.jpeg"
     },
     {
