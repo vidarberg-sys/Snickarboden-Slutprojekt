@@ -132,7 +132,7 @@
 #profile-container {
     display: inline-flex;
 }
-}
+
 
 .welcome {
     margin-bottom: var(--spacing-lg);

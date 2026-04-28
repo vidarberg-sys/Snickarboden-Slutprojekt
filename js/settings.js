@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const subject = document.getElementById("contact-subject").value.trim();
         const message = document.getElementById("contact-message").value.trim();
 
-        // Validering
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert("Ange en giltig e-postadress");

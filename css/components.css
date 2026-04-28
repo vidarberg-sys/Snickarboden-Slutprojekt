@@ -201,6 +201,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: var(--radius-round);
+    user-select: none;
 }
 
 .nat {
@@ -403,4 +404,40 @@ textarea {
         height: 40px !important;
         font-size: 24px !important;
     }
+}
+
+.login-container {
+    max-width: 400px;
+    width: min(100%, 400px);
+    margin: 120px auto 0;
+    padding: 20px;
+    background-color: rgb(192, 167, 137);
+    border: 2px solid #333;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.login-container input,
+.login-container button {
+    display: block;
+    width: 100%;
+    margin: 0 auto 10px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.login-container button {
+    background-color: rgb(236, 152, 88);
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: rgb(229, 176, 101);
+}
+.welcome {
+    margin-bottom: 20px;
 }

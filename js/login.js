@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="welcome">
                 <img src="${user.image}" alt="Profile" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333;">
             </div>
-            <a href="Test.html" class="test-page-btn" style="display: block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; margin-bottom: 10px; cursor: pointer; border: 2px solid #1e7e34; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Visa Test Sida</a>
+            <a href="Test.html" class="test-page-btn" style="display: block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; margin-bottom: 10px; cursor: pointer; border: 2px solid #1e7e34; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Produktöversikt</a>
             <button id="logout-btn">Logga ut</button>
         `;
         
-        // Lägg till hover-effekt för test-page-btn
+
         const testBtn = container.querySelector(".test-page-btn");
         testBtn.addEventListener("mouseover", function() {
             this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
