@@ -1,3 +1,4 @@
+//Detaljer för följare som används senare i sociala sidan
 const followers = [
     { name: "Fabian Samuelsson", image: "../bilder/IMG_2337.JPG" },
     { name: "Fredrik Wallden ", image: "../bilder/IMG_2443.jpeg" },
@@ -5,7 +6,7 @@ const followers = [
     { name: "Carl Coleman", image: "../bilder/IMG_2978.jpeg" },
     { name: "Freya Butterworth", image: "../bilder/IMG_2506.jpeg" }
 ];
-
+//Samma sak som butikssidan och hemsidan
 const uploadedItems = [
     {
         id: "up-1",
@@ -37,12 +38,12 @@ const uploadedItems = [
     }
 ];
 
-
+//Hämtar alla uppladdade produkter, både de fördefinierade och de som användaren har lagt till, från localStorage
 function getAllUploadedItems() {
     const userUploads = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
     return uploadedItems.concat(userUploads);
 }
-
+//follower kort som visas i sociala sidan
 function renderFollowers() {
     const container = document.getElementById("followers-container");
     if (!container) return;
@@ -59,7 +60,7 @@ function renderFollowers() {
         container.appendChild(followerItem);
     });
 }
-
+//kort för uppladade produkter
 function createUploadCard(item) {
     const card = document.createElement("div");
     card.className = "card";
@@ -78,7 +79,7 @@ function createUploadCard(item) {
 
     return card;
 }
-
+//Renderar uppladdade produkter i sociala sidan
 function renderUploads() {
     const grid = document.getElementById("social-card-grid");
     if (!grid) {
@@ -94,7 +95,7 @@ function renderUploads() {
         console.log("Appended card for:", item.namn);
     });
 }
-
+//Hantera sidomenyns hover-effekt och klick på navigationsobjekt
 function initSidebar() {
     const sideNav = document.getElementById("sideNav");
     const navItems = document.querySelectorAll(".nav-item");

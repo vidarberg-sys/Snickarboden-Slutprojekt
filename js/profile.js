@@ -1,3 +1,4 @@
+//Hanterar visning av användarprofil i sidhuvudet baserat på inloggningsstatus
 function updateProfileIcon() {
     const user = JSON.parse(localStorage.getItem("user"));
     const profileIcon = document.querySelector(".profile-icon");

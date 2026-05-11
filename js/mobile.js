@@ -1,3 +1,4 @@
+//Hantera mobilmenyns funktionalitet, inklusive öppning, stängning och hover-effekter
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const sideNav = document.getElementById("sideNav");
@@ -32,3 +33,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+

@@ -11,3 +11,4 @@ document.addEventListener("DOMContentLoaded", function() {
     const savedTheme = localStorage.getItem("theme") || "light";
     applyTheme(savedTheme);
 });
+//hanterar theme där den säger vilken färg backrunden får om den är på mörkt eller ljust läge.

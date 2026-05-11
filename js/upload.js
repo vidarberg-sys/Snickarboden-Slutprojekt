@@ -1,3 +1,5 @@
+
+//Hanterar produktuppladdning, inklusive validering av inloggning, filhantering och lagring av produktdata i localStorage
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("upload-form");
     const user = JSON.parse(localStorage.getItem("user"));

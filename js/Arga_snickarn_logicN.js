@@ -1,3 +1,5 @@
+
+//samma som i butikssidan fast för populära och nya produkter på startsidan
 const produkterPop = [
     {
         id: "prod-1",
@@ -57,9 +59,11 @@ const produkterPop = [
     }
 ];
 
-
+// antalet produkter som visas i nya produkter sektionen.
+// det va första versionen och viste inte att man kunde lägga de i grupper för att få olika data på de olika delarna. 
+// butikssidan gör det bättre
 const produkterNya = produkterPop.slice(-8);
-
+//Lägger till en produkt i kundvagnen och sparar den i localStorage
 function renderCards(produkter, containerId) {
     const container = document.getElementById(containerId);
 
@@ -93,7 +97,7 @@ function renderCards(produkter, containerId) {
         });
     });
 }
-
+//Lägger till en produkt i kundvagnen och sparar den i localStorage
 function addToCart(produkt) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.push(produkt);

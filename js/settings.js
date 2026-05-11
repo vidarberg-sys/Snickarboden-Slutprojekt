@@ -1,3 +1,6 @@
+
+//Hanterar inställningssidan där användare kan uppdatera sin profil, ändra app-tema,
+//  hantera uppladdningar och skicka meddelanden via kontaktformuläret
 document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user"));
     const container = document.getElementById("settings-content");
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </form>
     `;
 
-
+    //Lägger till event listeners för profiluppdatering, temaval, visning av uppladdningar och kontaktformulär
     document.getElementById("profile-form").addEventListener("submit", function(e) {
         e.preventDefault();
         const newName = document.getElementById("user-name").value;
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     applyTheme(savedTheme);
-
+    //Lägger till event listener för att visa användarens uppladdningar när knappen klickas
     document.getElementById("view-uploads").addEventListener("click", function() {
         const uploads = JSON.parse(localStorage.getItem("uploadedProducts")) || [];
         const list = document.getElementById("uploads-list");

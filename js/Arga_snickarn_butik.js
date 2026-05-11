@@ -1,3 +1,5 @@
+
+//De olika kortens information som visas i butikssidan
 const butikGroups = [
     {
         title: "Trä",
@@ -134,14 +136,14 @@ const butikGroups = [
         ]
     }
 ];
-
+//Lägger till en produkt i kundvagnen och sparar den i localStorage
 function addToCart(produkt) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.push(produkt);
     localStorage.setItem("shoppingCart", JSON.stringify(cart));
     window.location.href = "Arga_snickarn_korg.html";
 }
-
+//Skapar ett kort för varje produkt i butikssidan
 function createButikCard(product) {
     const card = document.createElement("div");
     card.className = "card";
@@ -167,7 +169,7 @@ function createButikCard(product) {
 
     return card;
 }
-
+//Renderar butikens olika sektioner och produkter på sidan
 function renderButikGroups() {
     const wrapper = document.getElementById("butik-sections");
     if (!wrapper) return;
@@ -196,7 +198,7 @@ function renderButikGroups() {
 
 window.addEventListener("DOMContentLoaded", renderButikGroups);
 
-
+//Hantera sidomenyns hover-effekt och klick på navigationsobjekt
 const sideNav = document.getElementById("sideNav");
 const navItems = document.querySelectorAll(".nav-item");
 

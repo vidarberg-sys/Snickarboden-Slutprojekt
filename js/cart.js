@@ -1,3 +1,5 @@
+
+//Hämtar kundvagnens innehåll från localStorage och visar det på sidan
 function displayCart() {
     const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     const cartContainer = document.getElementById("cart-container");
@@ -32,7 +34,7 @@ function displayCart() {
         cartContainer.appendChild(card);
     });
 }
-
+//tar bort produkter från cart
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.splice(index, 1);

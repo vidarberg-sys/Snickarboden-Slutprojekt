@@ -1,7 +1,10 @@
+
+//Hanterar inloggning, utloggning och visning av användarprofil på login-sidan
 document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user"));
     const container = document.getElementById("login-container");
 
+    //Om användaren är inloggad, visa välkomstmeddelande och profilbild, annars visa inloggningsformulär
     if (user) {
         container.innerHTML = `
             <h2>Välkommen, ${user.name}!</h2>
@@ -12,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <button id="logout-btn">Logga ut</button>
         `;
         
-
+        //Lägger till hover-effekt på knappen som leder till test-sidan och hanterar utloggning
         const testBtn = container.querySelector(".test-page-btn");
         testBtn.addEventListener("mouseover", function() {
             this.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
@@ -35,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <input type="file" id="image-input" accept="image/*" required>
             <button id="login-btn">Logga in</button>
         `;
+        //Hantera inloggning och spara användaruppgifter i localStorage
         document.getElementById("login-btn").addEventListener("click", function() {
             const name = document.getElementById("name-input").value.trim();
             const email = document.getElementById("email-input").value.trim();
