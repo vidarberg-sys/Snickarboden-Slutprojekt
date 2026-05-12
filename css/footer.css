@@ -10,10 +10,10 @@ footer {
     letter-spacing: 0.3px;
 }
 
-footer h3 {
+footer .kont {
     margin-top: 0;
     margin-bottom: var(--spacing-lg);
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-weight: 700;
 }
 
